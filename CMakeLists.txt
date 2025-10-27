@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(CalculatorProject CXX)
+
+add_library(calculator STATIC calculator.cpp)
+
+add_executable(main_app main.cpp)
+
+target_link_libraries(main_app PRIVATE calculator)
